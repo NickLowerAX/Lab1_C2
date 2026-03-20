@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import Timer from './components/ListaTareas/ListaTareas.vue'
+import Timer from './components/TimerComponentes/Timer.vue'
 
 // VARIABLES REACTIVAS
 const minutos = ref(25)
