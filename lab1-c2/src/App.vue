@@ -1,20 +1,67 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue'
+import Timer from './components/ListaTareas/ListaTareas.vue'
+
+// VARIABLES REACTIVAS
+const minutos = ref(25)
+const error = ref('')
+const iniciar = ref(false)
+const historial = ref([])
+
+// VALIDACIÓN
+function iniciarPomodoro() {
+  if (minutos.value <= 0) {
+    error.value = 'Debe ser mayor a 0'
+    return
+  }
+
+  if (minutos.value > 60) {
+    error.value = 'Máximo 60 minutos'
+    return
+  }
+
+  error.value = ''
+  iniciar.value = true
+}
+
+function guardarHistorial() {
+  historial.value.push(`Sesión de ${minutos.value} minutos completada`)
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+   <div class="container">
+    <h1>Pomodoro</h1>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <!-- INPUT -->
+    <input 
+      type="number" 
+      v-model="minutos"
+    >
 
-  <main>
-    <TheWelcome />
-  </main>
+    <!-- BOTÓN -->
+    <button @click="iniciarPomodoro">
+      Iniciar
+    </button>
+
+    <!-- ERROR -->
+    <p v-if="error" class="error">{{ error }}</p>
+
+    <!-- TIMER -->
+    <Timer 
+      v-if="iniciar"
+      :minutos="minutos"
+      @finalizado="guardarHistorial"
+    />
+  </div>
+
+  <h3>Historial</h3>
+
+  <ul>
+    <li v-for="(item, index) in historial" :key="index">
+      {{ item }}
+    </li>
+  </ul>
 </template>
 
 <style scoped>
