@@ -1,4 +1,5 @@
-<h1> integrantes </h1>
+<h1>Pomodoro Day</h1>
+<h2> integrantes </h2>
 Noé Isaí Hernández Rivas
 Eduardo Antonio Fuentes Melara
 
