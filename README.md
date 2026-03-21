@@ -38,7 +38,8 @@ iniciar eltiempo establecido del pomodoro
 
 Explique para qué utilizó la directiva v-for dentro de su aplicación
 --
-
+creé la variable constante: "const ciclos = ref(0)" para hacer este requisito y pense hacerlo al final lo que faltaba, se olvido y
+me acordé despues de subir el gh-page, ya despues me dio miedo cambiarle al codigo :´v. 
 
 Describa en qué situación utilizó v-if y qué problema resuelve dentro de su interfaz
 --
