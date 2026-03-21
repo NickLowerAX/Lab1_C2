@@ -3,9 +3,9 @@ import { ref } from 'vue'
 
 // VARIABLES REACTIVAS
 const trabajo = ref(25 * 60)
-const descanso = ref(5 * 60) // este cambiará dinámicamente
-const trabajoInput = ref('25') // valor por defecto
-const ciclos = ref(0) // cuenta cuántos pomodoros llevas
+const descanso = ref(5 * 60) 
+const trabajoInput = ref('25') 
+const ciclos = ref(0) 
 
 const tiempoRestante = ref(trabajo.value)
 const enTrabajo = ref(true)
