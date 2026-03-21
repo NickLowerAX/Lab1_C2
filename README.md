@@ -5,6 +5,16 @@ integrantes
 Noé Isaí Hernández Rivas
 Eduardo Antonio Fuentes Melara
 
+Situación Problematica:
+--
+En el entorno académico, especialmente en estudiantes universitarios, es común la dificultad para mantener la concentración durante largas jornadas de estudio. Muchos estudiantes se distraen fácilmente debido al uso constante de dispositivos electrónicos, redes sociales o la falta de una adecuada organización del tiempo (procrastinación). Esto provoca que sean poco productivos, se les acumule de tareas y estrés académico.
+
+Sector: Está dirigida principalmente a estudiantes y personas que trabajan o estudian desde casa.
+
+funcion: Pagina trabaja con el metodo "pomodoro" que permite iniciar un temporizador, alternar automáticamente entre trabajo y descanso.
+
+Esto ayuda a mejorar la concentración, reducir la procrastinación y optimizar el uso del tiempo.
+
 Codigo Fuente completo en la Branch "main"
 
 ¿Qué es Vue.js y cuál es su función en esta aplicación? 
