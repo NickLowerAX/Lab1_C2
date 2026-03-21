@@ -2,47 +2,56 @@ integrantes
 Noé Isaí Hernández Rivas
 Eduardo Antonio Fuentes Melara
 
-¿Qué es Vue.js y cuál es su función en esta aplicación? 
-Vue.js es una herramienta que ayuda a crear páginas web dinámicas e interactivas.
-En esta aplicación se utilizó para que el temporizador funcione en tiempo real, actualizando los datos en pantalla sin necesidad de recargar la página.
+Codigo Fuente completo en la Branch "main"
 
- Describa qué variables reactivas utilizó en su aplicación y cuál es la función de
+¿Qué es Vue.js y cuál es su función en esta aplicación? 
+
+Vue.js es un framework de JavaScript que permite crear interfaces web interactivas y dinámicas. Su función en esta aplicación es actualizar automáticamente la interfaz cuando cambian los datos, como el tiempo del temporizador o el estado del Pomodoro.
+
+Describa qué variables reactivas utilizó en su aplicación y cuál es la función de
 cada una dentro del sistema.
 
-Las variables reactivas permiten que cuando un dato cambie, también cambie automáticamente en la interfaz.
-minutos: guarda el tiempo que escribe el usuario.
-error: muestra mensajes si el dato ingresado es incorrecto.
-iniciar: controla cuándo aparece el temporizador.
-historial: guarda las sesiones terminadas.
-tiempo: lleva la cuenta regresiva en segundos.
-activo: indica si el temporizador está funcionando.
-terminado: muestra cuando el tiempo finaliza.
+trabajoInput: almacena el tiempo ingresado por el usuario
+trabajo: tiempo de trabajo en segundos
+descanso: tiempo de descanso en segundos
+tiempoRestante: controla el tiempo actual
+enTrabajo: indica si está en modo trabajo o descanso
+activo: indica si el temporizador está en ejecución
+ciclos: cuenta los ciclos completados
+error: muestra mensajes de validación
 
 
 Diferencia entre v-bind y v-model 
 
-v-model se usa para conectar un input con una variable, por ejemplo lo que escribe el usuario.
-v-bind se usa para enviar datos dinámicos a otro componente.
-En este proyecto, v-model se usó en el input de minutos y v-bind para pasar ese valor al temporizador.
+v-bind: se usa para enviar datos desde JavaScript al HTML
+v-model: permite enlazar datos en ambas direcciones (usuario ↔ sistema)
 
 Mencione al menos un ejemplo de evento utilizado dentro de su aplicación
 
-Un evento que utilicé fue el click, por ejemplo cuando el usuario presiona el botón de iniciar el temporizador. 
-Ese evento permite que se ejecute la función que comienza la cuenta regresiva.
+Ejemplo de codig: <button @click="iniciar">
+
+Evento "click", Este evento ejecuta la función cuando el usuario hace clic como para 
+iniciar eltiempo establecido del pomodoro
 
 Explique para qué utilizó la directiva v-for dentro de su aplicación
 
-La directiva v-for la utilicé para mostrar el historial de sesiones completadas. 
-Sirve para recorrer cada elemento guardado en la lista y mostrarlo automáticamente en pantalla.
+
 
 Describa en qué situación utilizó v-if y qué problema resuelve dentro de su interfaz
 
-Usé v-if para mostrar ciertos elementos solo cuando son necesarios, por ejemplo el mensaje de error 
-cuando el usuario ingresa un dato incorrecto o el temporizador cuando ya se inicia. Esto ayuda a que la interfaz se vea más ordenada 
-y solo aparezca la información necesaria.
+La directiva v-if se utilizó para mostrar u ocultar elementos dependiendo del estado de la aplicación. 
+Por ejemplo, se utiliza para mostrar mensajes de error cuando el usuario ingresa datos incorrectos en el campo de entrada. 
+Esto resuelve el problema de mostrar información innecesaria en la interfaz, ya que el mensaje solo aparece cuando realmente existe un error.
 
 Explique cómo se realiza la validación de datos en su aplicación y por qué es importante validar la información ingresada por el usuario
 
-La validación se hace revisando el valor que el usuario escribe antes de iniciar el temporizador. 
-Por ejemplo, no se permite ingresar números menores o iguales a cero ni mayores a 60.
-Esto es importante porque evita errores en el funcionamiento de la aplicación y asegura que el temporizador trabaje con datos correctos.
+La validación de datos se realiza mediante funciones en JavaScript que verifican la información ingresada por el usuario antes de iniciar el temporizador.
+
+en la funcionamiento se valida que:
+El campo no esté vacío
+El valor sea numérico
+El número sea mayor que 0
+No supere el límite permitido (25 minutos)
+
+La validación es importante porque evita errores en la ejecución del programa y asegura que el sistema funcione correctamente.
+Aparte de mejorar la experiencia que tiene el usuario interactuando libremente.
