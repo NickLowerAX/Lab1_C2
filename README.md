@@ -1,4 +1,4 @@
-integrantes
+<h1> integrantes </h1>
 Noé Isaí Hernández Rivas
 Eduardo Antonio Fuentes Melara
 
