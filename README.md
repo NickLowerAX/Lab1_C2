@@ -1,5 +1,6 @@
-<h1>Pomodoro Day</h1>
-<h2> integrantes </h2>
+Pomodoro Day
+------
+integrantes 
 Noé Isaí Hernández Rivas
 Eduardo Antonio Fuentes Melara
 
